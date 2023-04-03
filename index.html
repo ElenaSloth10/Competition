@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="competition, sport, sports team, scoring">
+	<meta name="description" content="Competitive scoring. A site for fixing team players and counting earned points.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap" rel="stylesheet">
+<link rel="icon" href="./image/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Competition</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>Calculation of competition results</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="general">
+                <div class="content">
+                    <div class="left">
+                        <form>
+                            <div class="form">
+                            <div class="participants">
+                                    <p>Participants:</p>
+                                </div>
+                            <div class="EnterAName">
+                                <label for="nameUser">Enter a name</label><br />
+                                <input type="text" id="nameUser" placeholder="Enter a name" required maxlength="30"/>
+                            </div>
+                            <div class="pointsScored">
+                                <p>Enter the points scored:</p>
+                                <div class="points">
+                                <div class="point">
+                                    <p>I round</p>
+                                <select name="select" id="selectroundI">
+                                    <option class="selectIoption0" value="selectIvalue0" selected >0</option>
+                                    <option class="selectIoption1" value="selectIvalue1">1</option>
+                                    <option class="selectIoption2" value="selectIvalue2">2</option>
+                                    <option class="selectIoption3" value="selectIvalue3">3</option>
+                                    <option class="selectIoption4" value="selectIvalue4">4</option>
+                                    <option class="selectIoption5" value="selectIvalue5">5</option>
+                                  </select>
+                                </div>
+                                <div class="point">
+                                    <p>II round</p>
+                                <select name="select" id="selectroundII">
+                                    <option class="selectIIoption0" value="selectIIvalue0" selected >0</option>
+                                    <option class="selectIIoption1" value="selectIIvalue1">1</option>
+                                    <option class="selectIIoption2" value="selectIIvalue2">2</option>
+                                    <option class="selectIIoption3" value="selectIIvalue3">3</option>
+                                    <option class="selectIIoption4" value="selectIIvalue4">4</option>
+                                    <option class="selectIIoption5" value="selectIIvalue5">5</option>
+                                  </select>
+                                </div>
+                                <div class="point">
+                                    <p>III round</p>
+                                <select name="select" id="selectroundIII">
+                                    <option class="selectIIIoption0" value="selectIIIvalue0" selected >0</option>
+                                    <option class="selectIIIoption1" value="selectIIIvalue1">1</option>
+                                    <option class="selectIIIoption2" value="selectIIIvalue2">2</option>
+                                    <option class="selectIIIoption3" value="selectIIIvalue3">3</option>
+                                    <option class="selectIIIoption4" value="selectIIIvalue4">4</option>
+                                    <option class="selectIIIoption5" value="selectIIIvalue5">5</option>
+                                  </select>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <label class="checkbox-label">Captain of the whole team</label>
+                                <input type="checkbox" class="checkbox-input" value="captain" />
+                            </div>
+                            <div class="add">
+                                <input type="button" class="submit" value="Add" />
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <div>
+                            <p class="list">Team list</p>
+                        </div>
+                        <table class="table">
+                            <thead class="thead-tr">
+                                <tr>
+                                    <td>Name</td>
+                                    <td>I round</td>
+                                    <td>II round</td>
+                                    <td>III round</td>
+                                    <td>Sum</td>
+                                  </tr>  
+                            </thead>
+                            <tbody class="tbody-tr">
+                            </tbody>
+                            <tfoot class="tfoot-tr">
+                                <tr>
+                                    <td>All players: <span class="allPlayers">0</span></td>
+                                    <td>Sum: <span class="allSumRoundI">0</span></td>
+                                    <td>Sum: <span class="allSumRoundII">0</span></td>
+                                    <td>Sum: <span class="allSumRoundIII">0</span></td>
+                                    <td>Sum: <span class="allSumRoundAll">0</span></td>
+                                  </tr>
+                            </tfoot>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Coded by Olena Kupko</p>
+        </div>
+    </footer>
+    <script src="./code/code.js"></script>
+</body>
+</html>

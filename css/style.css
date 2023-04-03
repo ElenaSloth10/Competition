@@ -1,0 +1,262 @@
+@import url(./normalize.css);
+
+:root {
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    --main-color: #CDA47A;
+    --text-color: #65483D;
+    --bg-color: #CED4B2;
+  }
+
+  p{
+    margin: 0;
+  }
+
+  .header{
+    background-color: var(--bg-color);
+  }
+
+  h1{
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 5rem;
+    padding: 50px 10px;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+  }
+
+  .general{
+    font-size: 2rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    background-image: url("../image/cup.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 100px 10px 150px 10px;
+  }
+
+  .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+
+  /* left */
+
+  .left{
+    padding: 10px;
+    width: 30%;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    align-self: flex-start;
+  }
+
+  .right{
+    padding: 10px;
+    width: 65%;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+  }
+
+  .participants, .pointsScored, .checkbox-item, .add{
+    margin-top: 30px;
+  }
+
+  .participants{
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  #nameUser, select{
+    border: 1px solid var(--text-color);
+    background-color: var(--main-color);
+    border-radius: 5px;
+    padding: 3px;
+  }
+
+  input::placeholder, select{
+    color: #fff;
+    padding: 0px 10px;
+  }
+
+  .points{
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0px;
+  }
+
+  .point{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3px 0px;
+  }
+
+  .checkbox-item, .EnterAName{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .add{
+    text-align: right;
+  }
+
+  .submit{
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    border-radius: 5px;
+    margin: 0px 5px 10px 0px;
+    transition: all 0.2s ease;
+    color: var(--text-color);
+    padding: 5px 30px;
+    cursor: pointer;
+  }
+
+  .submit:hover{
+    background-color: var(--text-color);
+    border: 1px solid var(--text-color);
+    color: #fff;
+  }
+
+
+  /* right */
+
+  .list{
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .table{
+    width: 100%;
+    color: #fff;
+  }
+
+  .table tr{
+    background-color: #c1b9ae;
+  }
+
+  .table tr td{
+    padding: 5px 10px;
+  }
+
+  .thead-tr tr, .tfoot-tr tr{
+    background-color: var(--main-color);
+  }
+
+  thead tr{
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .tbody-tr tr:nth-child(even){
+    background-color: #dfc59b;
+  }
+
+  .tbody-tr tr td:not(:first-child){
+    text-align: right;
+  }
+
+  .tbody-tr tr:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+  }
+
+  .tfoot-tr tr td{
+  text-align: right;
+    }
+
+  .tfoot-tr tr td span{
+  color: var(--text-color);
+  padding-left: 20px;
+  }
+
+
+/* captain */
+  .captain td:first-child{
+    background-image: url("../image/captain.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    padding-left: 30px;
+  }
+
+
+/* footer */
+
+  .footer{
+  background-color: var(--bg-color);
+  padding: 50px 50px 20px 20px;
+  }
+
+  .footer p{
+  font-size: 1.8rem;
+  text-align: right;
+  color: var(--main-color);
+  }
+
+
+  @media screen and (max-width: 1000px) {
+    .general {
+      padding: 10px;
+    }
+
+    .content{
+      flex-direction: column;
+    }
+
+    .left, .right{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    thead tr, .tfoot-tr tr, .tbody-tr tr{
+      font-size: 1.3rem;
+    }
+
+    .tfoot-tr tr td span{
+      padding-left: 10px;
+      }
+  }
+
+
+  @media screen and (max-width: 525px) {
+    h1{
+      font-size: 3rem;
+      padding: 20px 10px;
+    }
+
+    #nameUser {
+      width: 50%;
+    }
+
+    .left, thead tr, .tfoot-tr tr, .tbody-tr tr{
+      font-size: 1rem;
+    }
+
+    .tfoot-tr tr td span{
+      padding-left: 5px;
+      }
+
+      .footer {
+        padding: 20px;
+    }
+
+    .table tr td{
+      padding: 5px 5px;
+    }
+  }
